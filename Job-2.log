@@ -1,0 +1,20 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB Job-2
+Abaqus Student Edition 2018
+Begin Analysis Input File Processor
+2019-03-20 11:43:25 AM
+Run pre.exe
+2019-03-20 11:43:29 AM
+End Analysis Input File Processor
+Begin Abaqus/Standard Analysis
+2019-03-20 11:43:29 AM
+Run standard.exe
+2019-03-20 11:43:33 AM
+Abaqus Error: Abaqus/Standard Analysis exited with an error - Please see the 
+message file for possible error messages if the file exists.
+Begin Convert MFS to SFS
+2019-03-20 11:43:33 AM
+Run SMASimUtility.exe
+2019-03-20 11:43:34 AM
+End Convert MFS to SFS
+Abaqus/Analysis exited with errors

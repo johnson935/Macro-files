@@ -1,0 +1,2 @@
+angle,toughness
+0.0,159.0
