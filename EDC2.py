@@ -29,7 +29,7 @@ import math
 import time
 from collections import Counter
     
-def fEDC(part, model, xaxis, yaxis, zaxis, N, coord1, coord2, coord3, g0, g90, singlePlane, multiPlane, mat, cusMat):
+def fEDC(part, model, xaxis, yaxis, zaxis, N, g0, g90, singlePlane, multiPlane, mat, cusMat, *args, **kwargs):
     
     p = mdb.models[model].parts[part]
 
@@ -583,6 +583,9 @@ def fEDC(part, model, xaxis, yaxis, zaxis, N, coord1, coord2, coord3, g0, g90, s
     
     if singlePlane == True:
         area2 = {}
+        coord1 = kwargs.get('coord1')
+        coord2 = kwargs.get('coord2')
+        coord3 = kwargs.get('coord3')
         s = np.array(coord1.coordinates)
         q = np.array(coord2.coordinates)
         r = np.array(coord3.coordinates)
@@ -1020,6 +1023,6 @@ def fEDC(part, model, xaxis, yaxis, zaxis, N, coord1, coord2, coord3, g0, g90, s
                 totalU += np.dot(materialG[element],area2[element])
                     
                 
-            print('Total energy dissipated from failure: {0} kJ'.format(float(totalU)))
+            print('Total energy dissipated from failure: {0} for plane selected at: {1}, {2}, {3}'.format(float(totalU), s,q,r))
             t2 = time.time()
             print('Run time: {0}'.format(t2-t1))
